@@ -310,7 +310,7 @@ function generateAuthors(){
   /* END LOOP: for every article: */
   }
   /* [NEW] find list of tags in right column */
-  const AuthorList = document.querySelector('.Authors');
+  const AuthorList = document.querySelector('.authors');
 	
   /* [NEW] add html from allTags to tagList */
   //AuthorList.innerHTML = allAuthors.join(' ');//
@@ -324,15 +324,16 @@ function generateAuthors(){
 		/* [NEW] generate code of a link and add it to allTagsHTML */
 		//allAuthorsHTML += Author + '('+allAuthors[tag] +')';//
 		//allAuthorsHTML += '<li><a href="#Author-'+ Author +'">'+ Author +'</a>(' + allAuthors[Author] + ')</li>';//
-	const AuthorLinkHTML = '<li><a class="' + '" href="#Author-' + Author + '">' + Author + '</a>(' + allAuthors[Author] + ')</li>';
+	const AuthorLinkHTML = '<li><a class="' + '" href="#Author-' + Author + '">' + Author + '</a></li>';
    console.log('AuthorLinkHTML:', AuthorLinkHTML);
 	
 	allAuthorsHTML += AuthorLinkHTML;
 	
    /* [NEW] END LOOP: for each tag in allTags */
-  }
+  
    /* [NEW] add htm from allTagsHTML to tagList  */
    AuthorList.innerHTML = allAuthorsHTML;
+}
 }
 
 function addClickListenersToAuthors(){
