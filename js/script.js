@@ -396,7 +396,7 @@ function generateAuthors(){
       allAuthorsData.authors.push({
         author: articleAuthor,
         count: allAuthors[articleAuthor],
-        className: calculateTagClass(allAuthors, authorsParams)
+        className: calculateAuthorClass(allAuthors, authorsParams)
       });
     
       /* [NEW] generate code of a link and add it to allAuthorsHTML */
